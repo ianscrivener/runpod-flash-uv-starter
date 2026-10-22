@@ -1,13 +1,13 @@
 # RunPod Flash settings
 flash:
   gpu: "ADA_24"             # GPU group: AMPERE_80 | ADA_24 | ADA_48
-  workers: 1
+  workers: 1                # number of concurrent worker instances
   volume_size_gb: 60        # NetworkVolume — must fit model + quantized output
   min_cuda_version: "12.8"  # 12 or 13
 
 # Python environment settings
 python:
-  version: "3.13"           # Python version for the worker environment
+  version: "3.12"           # Python version for the worker environment
   dependencies: [           # Python dependencies to install in the worker environment
   ]
 
