@@ -5,7 +5,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = ["runpod-flash", "pyyaml", "python-dotenv"]
+dependencies = [
+ "pyyaml",
+ "python-dotenv",
+ "runpod==2.0.0rc2",
+]
 
 
 [build-system]
