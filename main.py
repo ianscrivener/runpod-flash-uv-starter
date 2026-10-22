@@ -6,8 +6,6 @@ runpod flash seed
 from pathlib import Path
 
 import runpod
-import yaml
-from dotenv import load_dotenv
 
 
 # ---------------------------------------------------------------------------
@@ -15,6 +13,10 @@ from dotenv import load_dotenv
 # ---------------------------------------------------------------------------
 
 if runpod.is_local():
+    # local-only imports. The worker does not need these packages
+    import yaml
+    from dotenv import load_dotenv
+
     # populate os.environ from .env
     load_dotenv(Path(__file__).parent / ".env")
 
